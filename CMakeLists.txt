@@ -36,10 +36,13 @@ pico_sdk_init()
 # Add executable. Default name is the project name, version 0.1
 
 add_executable(hdmi 
-	hdmi.c
+	#hdmi.c
+	Transmissor.c
 	#hdmi_Fonte_Original.c
 	tmds_encode_font_2bpp.S
 	tmds_encode_font_2bpp.h
+	lib/custom_ir.c
+    lib/ssd1306.c
 )
 
 pico_set_program_name(hdmi "hdmi")
@@ -47,7 +50,7 @@ pico_set_program_version(hdmi "0.1")
 
 # Modify the below lines to enable/disable output over UART/USB
 pico_enable_stdio_uart(hdmi 0)
-pico_enable_stdio_usb(hdmi 0)
+pico_enable_stdio_usb(hdmi 1)
 
 # Add the standard library to the build
 target_link_libraries(hdmi
@@ -77,6 +80,10 @@ target_link_libraries(hdmi
 	pico_multicore
 	libdvi
 	hardware_adc
+	hardware_dma
+	hardware_gpio
+	hardware_i2c
+	hardware_pwm
 )
 
 pico_add_extra_outputs(hdmi)
