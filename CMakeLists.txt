@@ -39,8 +39,8 @@ add_executable(hdmi
 	#hdmi.c
 	Transmissor.c
 	#hdmi_Fonte_Original.c
-	tmds_encode_font_2bpp.S
-	tmds_encode_font_2bpp.h
+	libtmds/tmds_encode_font_2bpp.S
+	libtmds/tmds_encode_font_2bpp.h
 	lib/custom_ir.c
     lib/ssd1306.c
 )

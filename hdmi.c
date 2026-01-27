@@ -29,7 +29,7 @@
 #include "dvi.h"
 #include "dvi_serialiser.h"
 #include "./include/common_dvi_pin_configs.h"
-#include "tmds_encode_font_2bpp.h"
+#include "libtmds/tmds_encode_font_2bpp.h"
 
 // Inclusão do arquivo de fonte
 #include "./assets/font_teste.h"
