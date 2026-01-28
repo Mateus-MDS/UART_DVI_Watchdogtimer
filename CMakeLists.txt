@@ -36,8 +36,8 @@ pico_sdk_init()
 # Add executable. Default name is the project name, version 0.1
 
 add_executable(hdmi 
-	#hdmi.c
-	Transmissor.c
+	hdmi.c
+	#Transmissor.c
 	#hdmi_Fonte_Original.c
 	libtmds/tmds_encode_font_2bpp.S
 	libtmds/tmds_encode_font_2bpp.h
@@ -68,9 +68,9 @@ target_compile_definitions(hdmi PRIVATE
 	)
 
 # Add the standard include files to the build
-#target_include_directories(hdmi PRIVATE
-#        ${CMAKE_CURRENT_LIST_DIR}
-#)
+target_include_directories(hdmi PRIVATE
+        ${CMAKE_CURRENT_LIST_DIR}/libtmds
+)
 add_subdirectory(libdvi)
 add_subdirectory(libsprite)
 
