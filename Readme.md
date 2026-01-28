@@ -127,3 +127,8 @@ Para garantir a estabilidade do sinal de vídeo a 60Hz, as tarefas são dividida
 * **Processamento de Fontes:** Inclui rotinas em Assembly (`tmds_encode_font_2bpp.S`) para codificação rápida, essencial para exibir dados com baixa latência.
 
 ---
+
+## Vídeo Demonstrativo
+
+**Clique [AQUI](https://www.youtube.com/watch?v=mi5Pt5lvZtY) para acessar o link do Vídeo Ensaio**
+
